@@ -1,11 +1,11 @@
-name: "sonar_cloud"
+name: "Sonartest"
 
 on:
   workflow_dispatch:
 
 jobs:
   DemoSonarCloudScan:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Repository
@@ -21,5 +21,5 @@ jobs:
       with:
         args: >
           -Dsonar.organization=sonarabdo
-          -Dsonar.projectKey=Sonartest
+          -Dsonar.projectKey=sonarabdo
           -Dsonar.python.coverage.reportPaths=coverage.xml
